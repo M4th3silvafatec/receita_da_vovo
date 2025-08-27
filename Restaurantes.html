@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurantes</title>
+    <link rel="icon" href="top.png" type="image/x-icon">
+    <link rel="stylesheet" href="restaurante.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <header>
+       <nav class="nav-menu">
+            <a class="nav-link" href="menu.html">Receita da semana</a>
+            <a class="nav-link" href="receitas.html">Receitas</a>
+            <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+        </nav>
+        
+
+        <div class="logo">
+            <img src="foto comida de vôvô.png" alt="Logo">
+        </div>
+
+        <div class="welcome">
+            Visite nossos restaurantes , <span id="nome-usuario">Visitante</span>
+        </div>
+    </header>
+
+    <h1 class="titulo-principal text-center my-5">Conheça dois restaurantes incríveis</h1>
+
+    <section class="restaurante container mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 texto">
+                <h2>Restaurante da Vó - São Paulo</h2>
+                <p>
+                    Localizado no coração de São Paulo, o Restaurante da Vó é conhecido pelo sabor autêntico da comida caseira.
+                    Fundado em 1985, preserva receitas tradicionais passadas de geração em geração.
+                    É um ponto de encontro para quem busca conforto e sabor.
+                </p>
+            </div>
+            <div class="col-md-6 mapa">
+                <!-- Substitua abaixo pelo iframe do Google Maps -->
+                <p><em><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.39555338223!2d-46.92495441693524!3d-23.681434611465907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1756234202716!5m2!1spt-BR!2sbr" width="660" height="330" style="border: 50px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></em></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurante container mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 texto">
+                <h2>Restaurante da Vó- João Pessoa</h2>
+                <p>
+                    Em João Pessoa, o Restaurante da Vó oferece uma experiência cultural completa,
+                    com pratos típicos da região e um ambiente acolhedor.
+                    Fundado por uma família apaixonada pela culinária nordestina, é um símbolo de orgulho local.
+                </p>
+            </div>
+            <div class="col-md-6 mapa">
+                <!-- Substitua abaixo pelo iframe do Google Maps -->
+                <p><em><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7917.489579774032!2d-34.8062831167352!3d-7.155477781866105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace839019aa3d7%3A0x6e414a9c6d26db34!2sJo%C3%A3o%20Pessoa%2C%20PB!5e0!3m2!1spt-BR!2sbr!4v1756234057788!5m2!1spt-BR!2sbr" width="660" height="330" style="border:500;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></em></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+        if (usuarioLogado && usuarioLogado.nome) {
+            document.getElementById('nome-usuario').textContent = usuarioLogado.nome;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Receitas</title>
+    <link rel="icon" href="top.png" type="image/x-icon">
+    <link rel="stylesheet" href="receitas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a class="nav-link" href="menu.html">Receita da semana</a>
+            <a class="nav-link" href="receitas.html">Receitas</a>
+            <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+        </nav>
+
+        <div class="logo">
+            <img src="foto comida de vôvô.png" alt="Logo">
+        </div>
+
+        <div class="welcome">
+            Veja mais receitas , <span id="nome-usuario">Visitante</span>
+        </div>
+    </header>
+
+    <h1 class="text-center my-5">Receitas Deliciosas</h1>
+
+    <div class="container receitas-grid">
+        <!-- Cartão de receita 1 -->
+        <div class="receita-card">
+            <img src="torta de ovo.jpg" alt="Receita 1">
+            <h5>Torta de ovo</h5>
+        </div>
+
+        <!-- Cartão de receita 2 -->
+        <div class="receita-card">
+            <img src="frango.jpg" alt="Receita 2">
+            <h5>frango</h5>
+        </div>
+
+        <!-- Cartão de receita 3 -->
+        <div class="receita-card">
+            <img src="pizza.jpg" alt="Receita 3">
+            <h5> pizza </h5>
+        </div>
+        <div class="receita-card">
+            <img src="batatas.jpg" alt="Receita 3">
+            <h5>Batata frita</h5>
+        </div>
+        <div class="receita-card">
+            <img src="bife.jpg" alt="Receita 3">
+            <h5>bife</h5>
+        </div>
+        <div class="receita-card">
+            <img src="peixe.jpg" alt="Receita 3">
+            <h5>Peixe</h5>
+        </div>
+        <div class="receita-card">
+            <img src="omelete.jpg" alt="Receita 3">
+            <h5>omelete</h5>
+        </div>
+        <div class="receita-card">
+            <img src="Sorvete.jpg" alt="Receita 3">
+            <h5>Sorvete</h5>
+        </div>
+
+        <!-- Copie os blocos acima para adicionar mais receitas -->
+    </div>
+
+    <script>
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+        if (usuarioLogado && usuarioLogado.nome) {
+            document.getElementById('nome-usuario').textContent = usuarioLogado.nome;
+        }
+    </script>
+
+</body>
+</html>
