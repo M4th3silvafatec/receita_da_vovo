@@ -1,0 +1,245 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto; /* Alterado de 'hidden' para permitir rolagem em telas menores */
+}
+
+/* Container principal */
+.main-login {
+    width: 100%;
+    min-height: 100vh; /* Garante altura mínima, mas permite expansão */
+    display: flex;
+    flex-direction: row; /* Por padrão, lado a lado */
+}
+
+/* Lado esquerdo com imagem */
+.left-login {
+    flex: 1;
+    background: url('comida\ login.png') no-repeat center center;
+    background-size: cover;
+    display: block; /* Garante que a imagem seja exibida */
+}
+
+/* Lado direito (formulário) */
+.right-login {
+    flex: 0.5;
+    background-color: #f7df1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adiciona padding para evitar colagem nas bordas */
+}
+
+/* Card de login */
+.card-login {
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima */
+    padding: 40px 30px; /* Reduz padding em telas menores */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#logo-login {
+    width: 50%; /* Usa porcentagem para escalar com o contêiner */
+    max-width: 250px; /* Limita o tamanho máximo */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-login h1 {
+    font-size: 2rem; /* Reduz ligeiramente para telas menores */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Campos de texto */
+.texfild {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.texfild label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+    letter-spacing: 0.3px;
+}
+
+.texfild input {
+    width: 100%;
+    padding: 12px 14px; /* Ajusta padding para telas menores */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.texfild input:focus {
+    border-color: #f7df1e;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(255, 87, 34, 0.4);
+}
+
+/* Botão */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f7da01;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #b89d06;
+}
+
+/* Links e texto */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 5px; /* Mantém a margem do link, conforme solicitado anteriormente */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .main-login {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    .left-login {
+        flex: none;
+        height: 40vh; /* Reduz a altura da imagem */
+        min-height: 200px; /* Garante um tamanho mínimo */
+    }
+
+    .right-login {
+        flex: none;
+        height: 60vh; /* Ajusta a altura do formulário */
+        padding: 20px;
+    }
+
+    .card-login {
+        padding: 30px 20px; /* Reduz padding */
+    }
+
+    #logo-login {
+        width: 40%; /* Reduz ainda mais o tamanho da logo */
+        max-width: 200px;
+    }
+
+    .card-login h1 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+}
+
+@media (max-width: 768px) {
+    .left-login {
+        display: none; /* Esconde a imagem em telas pequenas */
+    }
+
+    .right-login {
+        height: 100vh; /* Ocupa toda a tela */
+        flex: 1;
+    }
+
+    .card-login {
+        padding: 20px 15px; /* Menos padding em telas pequenas */
+        max-width: 90%; /* Usa mais espaço disponível */
+    }
+
+    #logo-login {
+        width: 35%;
+        max-width: 150px;
+    }
+
+    .card-login h1 {
+        font-size: 1.5rem;
+    }
+
+    .texfild input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .btn-login {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-login {
+        padding: 15px 10px;
+        max-width: 95%;
+    }
+
+    #logo-login {
+        width: 30%;
+        max-width: 120px;
+    }
+
+    .card-login h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .texfild label {
+        font-size: 14px;
+    }
+
+    .texfild input {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .btn-login {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    a {
+        margin: 0 3px; /* Reduz a margem do link para telas muito pequenas */
+    }
+}

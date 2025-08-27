@@ -1,0 +1,220 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: auto; /* Permite rolagem em telas menores */
+}
+
+/* Container principal */
+.main-cadastro {
+    width: 100%;
+    min-height: 100vh; /* Garante altura mínima, permite expansão */
+    background: url('comida2.png') no-repeat center center;
+    background-size: cover; /* Ajusta a imagem para cobrir a tela */
+    background-position: center; /* Garante alinhamento central */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Adiciona padding para evitar colagem nas bordas */
+}
+
+/* Centralização do conteúdo */
+.center-cadastro {
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima do conteúdo */
+}
+
+.center-cadastro > h1 {
+    color: #ffffff;
+    font-weight: 800;
+    margin: 0 auto 20px; /* Remove margin-left, centraliza */
+
+    font-size: 2rem;
+}
+
+/* Card de cadastro */
+.card-text {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 35px;
+    background: #fff; /* Fundo branco, como o card de login */
+    border-radius: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25); /* Sombra igual ao card de login */
+    margin: 0 auto;
+}
+
+/* Campos de texto */
+.text-cadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.text-cadastro input {
+    width: 100%;
+    border: 2px solid #ddd; /* Borda semelhante ao card de login */
+    border-radius: 10px;
+    padding: 12px 15px;
+    background: #fafafa; /* Fundo claro para contraste com branco */
+    color: #333; /* Cor do texto para contraste */
+    font-size: 14px;
+    box-shadow: none; /* Remove sombra para manter leveza */
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.text-cadastro input:focus {
+    border-color: #e5ff00b0; /* Cor laranja no foco, consistente com o tema */
+    background: #fff;
+    box-shadow: 0 0 6px rgba(210, 247, 3, 0.836);
+}
+
+.text-cadastro label {
+    color: #444; /* Cor escura para contraste com fundo branco */
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Botão */
+.btn-cadastro {
+    width: 100%;
+    padding: 12px 0;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #f7da01;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ffc04d;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-cadastro:hover {
+    background: #aab602; /* Escurece levemente no hover */
+}
+
+/* Ícone de olho */
+.fa-eye {
+    color: #ffa500;
+    position: absolute;
+    right: 15px;
+    top: 65%; /* Ajustado para alinhar melhor com o input */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .center-cadastro > h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .card-text {
+        max-width: 90%;
+        padding: 25px 20px;
+    }
+
+    .text-cadastro input {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .btn-cadastro {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-cadastro {
+        padding: 15px;
+        background-size: cover; /* Mantém a imagem cobrindo a tela */
+    }
+
+    .center-cadastro > h1 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+
+    .card-text {
+        max-width: 95%;
+        padding: 20px 15px;
+    }
+
+    .text-cadastro input {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .text-cadastro label {
+        font-size: 14px;
+    }
+
+    .btn-cadastro {
+        padding: 8px 0;
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .fa-eye {
+        right: 10px;
+        top: 62%; /* Ajusta o ícone para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-cadastro {
+        padding: 10px;
+    }
+
+    .center-cadastro > h1 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        max-width: 100%;
+        padding: 15px 10px;
+    }
+
+    .text-cadastro input {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .text-cadastro label {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .btn-cadastro {
+        padding: 6px 0;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .fa-eye {
+        right: 8px;
+        top: 60%;
+        font-size: 14px; /* Reduz tamanho do ícone */
+    }
+}
